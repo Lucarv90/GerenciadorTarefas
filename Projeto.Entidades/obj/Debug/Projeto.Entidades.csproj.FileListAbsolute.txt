@@ -1,0 +1,5 @@
+C:\Users\Luiz\Documents\Visual Studio 2015\Projects\GerenciadorTarefas\Projeto.Entidades\bin\Debug\Projeto.Entidades.dll
+C:\Users\Luiz\Documents\Visual Studio 2015\Projects\GerenciadorTarefas\Projeto.Entidades\bin\Debug\Projeto.Entidades.pdb
+C:\Users\Luiz\Documents\Visual Studio 2015\Projects\GerenciadorTarefas\Projeto.Entidades\obj\Debug\Projeto.Entidades.csprojResolveAssemblyReference.cache
+C:\Users\Luiz\Documents\Visual Studio 2015\Projects\GerenciadorTarefas\Projeto.Entidades\obj\Debug\Projeto.Entidades.dll
+C:\Users\Luiz\Documents\Visual Studio 2015\Projects\GerenciadorTarefas\Projeto.Entidades\obj\Debug\Projeto.Entidades.pdb

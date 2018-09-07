@@ -1,0 +1,50 @@
+﻿@model Projeto.WEB.Models.TarefaEdicaoModel
+
+@{
+    ViewBag.Title = "Edicao";
+    Layout = "~/Views/Templates/LayoutLogged.cshtml";
+}
+
+<!DOCTYPE html>
+
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm())
+        {
+            <label>Código:</label>
+            @Html.TextBoxFor(model => model.IdTarefa,
+            new { @class = "form-control", @readonly = "readonly"})
+
+
+            <label>Nome:</label>
+            @Html.TextBoxFor(model => model.Titulo,
+                 new { @class = "form-control" })
+            <span class="text-danger">
+                @Html.ValidationMessageFor(model => model.Titulo)
+            </span>
+            <br />
+
+            <label>Descrição:</label>
+            @Html.TextAreaFor(model => model.Descricao,
+                 new { @type = "text", @class = "form-control" })
+            <span class="text-danger">
+                @Html.ValidationMessageFor(model => model.Descricao)
+            </span>
+            <br />
+
+            <br />
+            <input type="submit" value="Atualizar"
+                   class="btn btn-success" />
+                <br />
+
+                <br />
+                <strong>
+                    @ViewBag.Mensagem
+                </strong>
+        }
+
+
+
+
+    </div>
+</div>

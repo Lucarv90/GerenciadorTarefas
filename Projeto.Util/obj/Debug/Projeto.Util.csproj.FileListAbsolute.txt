@@ -1,0 +1,4 @@
+C:\Users\Luiz\Documents\Visual Studio 2015\Projects\GerenciadorTarefas\Projeto.Util\bin\Debug\Projeto.Util.dll
+C:\Users\Luiz\Documents\Visual Studio 2015\Projects\GerenciadorTarefas\Projeto.Util\bin\Debug\Projeto.Util.pdb
+C:\Users\Luiz\Documents\Visual Studio 2015\Projects\GerenciadorTarefas\Projeto.Util\obj\Debug\Projeto.Util.dll
+C:\Users\Luiz\Documents\Visual Studio 2015\Projects\GerenciadorTarefas\Projeto.Util\obj\Debug\Projeto.Util.pdb

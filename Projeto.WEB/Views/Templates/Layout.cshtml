@@ -1,0 +1,32 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Gerenciador de Tarefas</title>
+
+    <!--Bootstrap-->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+
+    <!--Jscript-->
+    <script src="~/scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/scripts/bootstrap.min.js"></script>
+
+    @RenderSection("scripts", required: false)
+
+</head>
+<body class="container container-fluid">
+    <div class="well well-sm align-content-center" align="center">
+        <h2>Gerenciador de Tarefas - Processo Seletivo</h2>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            @RenderBody()
+        </div>
+
+    </div>
+</body>
+</html>

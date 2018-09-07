@@ -1,0 +1,50 @@
+﻿@model Projeto.WEB.Models.TarefaCadastroModel
+@{
+    ViewBag.Title = "Cadastro";
+    Layout = "~/Views/Templates/LayoutLogged.cshtml";
+}
+
+<h2>Cadastro</h2>
+
+<a href="/Logged/Index" class="btn btn-default">
+    <span class="glyphicon glyphicon-arrow-left"></span> Início
+</a>
+<br />
+<br />
+
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm())
+        {
+            <label>Nome:</label>
+            @Html.TextBoxFor(model => model.Titulo,
+                 new { @class = "form-control" })
+            <span class="text-danger">
+                @Html.ValidationMessageFor(model => model.Titulo)
+            </span>
+            <br />
+
+            <label>Descrição:</label>
+            @Html.TextAreaFor(model => model.Descricao,
+                 new { @type = "text", @class = "form-control" })
+            <span class="text-danger">
+                @Html.ValidationMessageFor(model => model.Descricao)
+            </span>
+            <br />
+
+            <br />
+            <input type="submit" value="Cadastrar Tarefa"
+                   class="btn btn-success" />
+                <br />
+
+                <br />
+                <strong>
+                    @ViewBag.Mensagem
+                </strong>
+        }
+
+
+
+
+    </div>
+</div>

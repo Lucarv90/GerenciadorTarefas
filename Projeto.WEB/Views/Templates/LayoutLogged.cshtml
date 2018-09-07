@@ -1,0 +1,72 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Gerenciador de Tarefas</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+
+    <!--Jscript-->
+    <script src="~/scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/scripts/bootstrap.min.js"></script>
+
+    @RenderSection("scripts", required: false)
+
+
+</head>
+<body class="container container-fluid">
+    <nav class="navbar">
+        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+            <div class="container">
+                <nav class="navbar-header">
+                    <a class="navbar-brand" href="/Logged/Index">Gerenciador</a>
+                </nav>
+
+                <div class="collapse navbar-collapse" id="navbarMain">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/Logged/Index">Tarefas</a></li>
+                        <li><a href="/Logged/Cadastro">Cadastrar Tarefa</a></li>
+                        <li><a href="/Usuario/Cadastro">Cadastrar Usuario</a></li>
+                    </ul>
+                    <div class="navbar-text navbar-right">
+                        @using Projeto.Entidades
+                        @{ 
+                            //Aqui eu resgato quem é o usuário da sessão..
+                            Usuario u = Session["usuario"] as Usuario;
+                        }
+
+                        Bem vindo: <strong>@u.Nome</strong>  &nbsp;
+                    </div> 
+                    <nav class="navbar-collapse navbar-right">
+                        <a href="/Home/Logout" class="btn btn-danger navbar-btn">
+                            Sair
+                        </a>
+                    </nav>
+                </div>
+
+            </div>
+        </nav>
+    </nav>
+
+    <br/>
+    <br/>
+    <div class="row">
+        <div class="col-md-12">
+            @RenderBody()
+        </div>
+    </div>
+    
+</body>
+</html>
+
+
+
+
+

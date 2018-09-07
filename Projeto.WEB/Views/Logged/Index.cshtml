@@ -1,0 +1,113 @@
+﻿@model List<Projeto.WEB.Models.ConsultaTarefaModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Templates/LayoutLogged.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="table-responsive">
+        <table id="tabela" class="table table-bordered table-hover table-striped">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" id="checkall" /></th>
+                    <th>Código</th>
+                    <th>Título</th>
+                    <th>Descrição</th>
+                    <th>Operações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td><input type="checkbox" class="checkbox" /></td>
+                        <td>@item.IdTarefa</td>
+                        <td>@item.Titulo</td>
+                        <td>@item.Descricao</td>
+
+                        <td>
+                            <a href="/Logged/Edicao/@item.IdTarefa"
+                               class="btn btn-primary">
+                                Editar
+
+                            </a>
+                            <a href="/Logged/Excluir/@item.IdTarefa"
+                               class="btn btn-danger"
+                               onclick="return confirm
+                                    ('Deseja excluir este produto?');">
+
+                                Excluir
+                            </a>                            
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5">Quantidade de registros: @Model.Count </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+
+<!--Script para marcar todas as checks de uma vez-->
+@section scripts{
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#tabela #checkall").click(function () {
+                if ($("#tabela #checkall").is(':checked')) {
+                    $("#tabela input[type=checkbox]").each(function () {
+                        $(this).prop("checked", true);
+                    });
+
+                } else {
+                    $("#tabela input[type=checkbox]").each(function () {
+                        $(this).prop("checked", false);
+                    });
+                }
+            });
+
+            $("[data-toggle=tooltip]").tooltip();
+        });
+           
+
+
+        /* Apresentou problemas durante a implementação
+
+        $(document).ready(function(){ 
+            //criando um evento no botão de cadastro..
+            $("#btncadastro").click(function(){
+                //executar a função de cadastrar cliente..
+                cadastrarCliente();
+            });
+        });
+
+        $("#edit").click(function () {
+            var id = $(this).attr("data-id");
+            $("#modalEdit").load("Edicao?id=" + id, function () {
+                $("#modalEdit").modal();
+            })
+
+        });       
+
+    
+
+    $(function () {
+        $("#delete").click(function () {
+            var id = $(this).attr("data-id");
+            $("#modalDel").load("Excluir?id=" + id, function () {
+                $("#modalDel").modal();
+            })
+
+        });
+    })
+        
+        */
+    
+    </script>
+
+}

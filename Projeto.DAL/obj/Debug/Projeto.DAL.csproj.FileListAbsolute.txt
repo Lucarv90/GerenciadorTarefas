@@ -1,0 +1,7 @@
+C:\Users\Luiz\Documents\Visual Studio 2015\Projects\GerenciadorTarefas\Projeto.DAL\bin\Debug\Projeto.DAL.dll
+C:\Users\Luiz\Documents\Visual Studio 2015\Projects\GerenciadorTarefas\Projeto.DAL\bin\Debug\Projeto.DAL.pdb
+C:\Users\Luiz\Documents\Visual Studio 2015\Projects\GerenciadorTarefas\Projeto.DAL\bin\Debug\Projeto.Entidades.dll
+C:\Users\Luiz\Documents\Visual Studio 2015\Projects\GerenciadorTarefas\Projeto.DAL\bin\Debug\Projeto.Entidades.pdb
+C:\Users\Luiz\Documents\Visual Studio 2015\Projects\GerenciadorTarefas\Projeto.DAL\obj\Debug\Projeto.DAL.csprojResolveAssemblyReference.cache
+C:\Users\Luiz\Documents\Visual Studio 2015\Projects\GerenciadorTarefas\Projeto.DAL\obj\Debug\Projeto.DAL.dll
+C:\Users\Luiz\Documents\Visual Studio 2015\Projects\GerenciadorTarefas\Projeto.DAL\obj\Debug\Projeto.DAL.pdb

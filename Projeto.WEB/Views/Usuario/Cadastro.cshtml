@@ -1,0 +1,78 @@
+﻿@model Projeto.WEB.Models.UsuarioCadastroModel
+
+@{
+    ViewBag.Title = "Cadastro";
+    Layout = "~/Views/Templates/Layout.cshtml";
+}
+
+<h2>Cadastre-se: É gratuito e sempre será!</h2>
+<a href="/Logged/Index" class="btn btn-default">
+    <span class="glyphicon glyphicon-arrow-left"></span> Tarefas
+</a>
+<br/>
+<br/>
+<a href="/Home/Index">
+    <span class="glyphicon glyphicon-log-out"></span> Login
+ </a>
+<hr/>
+
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm())
+        {
+            <label>Nome de Usuário:</label>
+            @Html.TextBoxFor(model => model.Nome,
+                                new { @class ="form-control"})
+            <span class="text-danger">
+                @Html.ValidationMessageFor(Model => Model.Nome)
+            </span>
+            <br/>
+
+            <label>Email:</label>
+            @Html.TextBoxFor(model => model.Email,
+                                new { @class = "form-control", @type = "email" })
+            <span class="text-danger">
+                @Html.ValidationMessageFor(Model => Model.Email)
+            </span>
+            <br />
+
+            <label>Senha:</label>
+            @Html.TextBoxFor(model => model.Senha, 
+                                new { @class = "form-control", @type = "password"})
+            <span class="text-danger">
+                @Html.ValidationMessageFor(Model => Model.Senha)
+            </span>
+            <br/>
+
+            <label>Confirme a sua senha:</label>
+            @Html.TextBoxFor(model => model.SenhaConfirm,
+                                new { @class = "form-control", @type = "password"})
+            <span class="text-danger">
+                @Html.ValidationMessageFor(model => model.SenhaConfirm)
+            </span>
+            <br/>
+
+
+
+            <label>Selecione a permissão de usuário:</label>
+            @Html.DropDownListFor(model => model.IdPermissao, Model.ListagemPermissao,
+                                  "Selecione uma opção", new { @class = "form-control" })
+            <span class="text-danger">
+                @Html.ValidationMessageFor(model => model.IdPermissao)
+            </span>
+            <br/>
+
+            <br/>
+            <input type="submit" value="Cadastrar Usuário"
+                   class="btn btn-success glyphicon-check"/>
+                   <br/>
+                   <br/>
+                   <strong>
+                       @ViewBag.Mensagem
+                   </strong>
+            
+
+        }
+    </div>
+</div>
+
